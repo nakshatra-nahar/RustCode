@@ -1,0 +1,19 @@
+[package]
+name = "xtask"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+categories.workspace = true
+repository.workspace = true
+homepage.workspace = true
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rustcode-term = { path = "../rustcode-term" }
+rustcode-core = { path = "../rustcode-core" }
+rustcode-view = { path = "../rustcode-view" }
+rustcode-loader = { path = "../rustcode-loader" }
+toml = "0.8"

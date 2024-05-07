@@ -1,0 +1,28 @@
+[package]
+name = "rustcode-tui"
+description = """A library to build rich terminal user interfaces or dashboards"""
+include = ["src/**/*", "README.md"]
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+categories.workspace = true
+repository.workspace = true
+homepage.workspace = true
+
+[features]
+default = ["crossterm"]
+
+[dependencies]
+rustcode-view = { path = "../rustcode-view", features = ["term"] }
+rustcode-core = { path = "../rustcode-core" }
+
+bitflags = "2.5"
+cassowary = "0.3"
+unicode-segmentation = "1.11"
+crossterm = { version = "0.27", optional = true }
+termini = "1.0"
+serde = { version = "1", "optional" = true, features = ["derive"]}
+once_cell = "1.19"
+log = "~0.4"
